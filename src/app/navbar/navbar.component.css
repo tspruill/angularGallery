@@ -1,0 +1,8 @@
+ a {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    color: aliceblue;
+}
+
+ a:hover {
+    color: pink;
+}
