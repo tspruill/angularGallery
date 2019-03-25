@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,8 +10,8 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { PhotosComponent } from './photos/photos.component';
 import { ImageService  } from './photos/services/image.service';
 import { FilterPipe } from './photos/services/filter.pipe';
-import { RouterModule, Routes } from '@angular/router';
-import {appRoutes} from '../routes'
+import {appRoutes} from '../routes';
+import { ImageComponent } from './photos/image.component'
 
 @NgModule({
   declarations: [
@@ -17,11 +19,13 @@ import {appRoutes} from '../routes'
     NavbarComponent,
     GalleryComponent,
     PhotosComponent,
-    FilterPipe
+    FilterPipe,
+    ImageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+     FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [ImageService, FilterPipe],

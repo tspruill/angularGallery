@@ -1,4 +1,5 @@
-import {Routes} from '@angular/routes'
+
+import {Routes} from '@angular/router'
 import {GalleryComponent} from './app/gallery/gallery.component'
 import {PhotosComponent} from './app/photos/photos.component'
 

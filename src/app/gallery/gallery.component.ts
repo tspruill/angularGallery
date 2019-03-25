@@ -7,12 +7,14 @@ import {ImageService} from '../photos/services/image.service';
 })
 export class GalleryComponent implements OnChanges {
   visableImages: any[] = [];
+  images:any[];
   title = 'Gallery';
   
-  @Input() filterBy?:string = 'all';
+  filterBy?:string = 'all';
   
   
   constructor(private imageService:ImageService) { 
+     console.log(this.filterBy)
      this.visableImages = this.imageService.getImages(); 
   }
 
@@ -21,5 +23,7 @@ export class GalleryComponent implements OnChanges {
      
   
   }
-
+   changeFilter(filter:string){
+      this.filterBy = filter;
+   }
 }
